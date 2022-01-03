@@ -11,7 +11,7 @@ function onEnteredText(){
     // console.log(stringInfo);
 }
 
-function myFunction() {
+function showPassword() {
     var x = document.getElementById("password");
     if (x.type === "password") {
       x.type = "text";
