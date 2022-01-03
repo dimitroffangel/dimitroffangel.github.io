@@ -1,8 +1,14 @@
 function onEnteredText(){
     
     const stringInfo = document.getElementById("password").value;
-    console.log(stringInfo);
-    // alert("good job fam");
+    
+    if(SHA1(stringInfo)){
+        alert("good job fam");
+    }
+    else{
+        alert("wrong password");
+    }
+    // console.log(stringInfo);
 }
 
 function myFunction() {
@@ -46,7 +52,8 @@ function fooHash(input){
 }
 
 function SHA1 (msg) {
-    var codes = ['5271593ca406362d7a2701e331408ab77d5b5b88', 'foasodsaod'];
+    var codes = ['2fd4e1c67a2d28fced849ee1bb76e7391b93eb12', 'ab0c290d42bb751ce97adaebd50b2e61d9608ad5', 'd766b8cacafebb5af548c4b63e8e5e3316afd3c2',
+    '2c11d616c929b3b6532c2135b9e4bfc4097cf071', '2ebc81c4233f88aaee6b5a8878a1f1e565d4a99c', '30d2c74aecef57860f418c8c0501bc5702daa16e'];
 
     function rotate_left(n,s) {
         var t4 = ( n<<s ) | (n>>>(32-s));
@@ -96,7 +103,7 @@ function SHA1 (msg) {
     };
     var blockstart;
     var i, j;
-    var W = new Array(80);
+    var W = new Array(msg.length);
     var H0 = 0x67452301;
     var H1 = 0xEFCDAB89;
     var H2 = 0x98BADCFE;
@@ -177,7 +184,12 @@ function SHA1 (msg) {
         H4 = (H4 + E) & 0x0ffffffff;
     }
     var temp = cvt_hex(H0) + cvt_hex(H1) + cvt_hex(H2) + cvt_hex(H3) + cvt_hex(H4);
-    // return temp.toLowerCase();
 
-    return temp.toLocaleLowerCase() == codes[0];
+    console.log(temp.toLocaleLowerCase());
+
+    for(var i = 0; i < codes.length; ++i){
+        if(temp.toLocaleLowerCase() == codes[i]){
+            return true;
+        }
+    }
 }
