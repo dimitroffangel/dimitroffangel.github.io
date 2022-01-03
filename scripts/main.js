@@ -53,7 +53,7 @@ function fooHash(input){
 
 function SHA1 (msg) {
     var codes = ['2fd4e1c67a2d28fced849ee1bb76e7391b93eb12', 'ab0c290d42bb751ce97adaebd50b2e61d9608ad5', 'd766b8cacafebb5af548c4b63e8e5e3316afd3c2',
-    '2c11d616c929b3b6532c2135b9e4bfc4097cf071', '2ebc81c4233f88aaee6b5a8878a1f1e565d4a99c', '30d2c74aecef57860f418c8c0501bc5702daa16e'];
+    '2c11d616c929b3b6532c2135b9e4bfc4097cf071', '2ebc81c4233f88aaee6b5a8878a1f1e565d4a99c', '30d2c74aecef57860f418c8c0501bc5702daa16e', '6009e0ebedc94f074f1bc01aca91b63086e2161e'];
 
     function rotate_left(n,s) {
         var t4 = ( n<<s ) | (n>>>(32-s));
