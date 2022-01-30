@@ -1,14 +1,14 @@
 function onEnteredText(){
     
-    const stringInfo = document.getElementById("password").value;
-    
-    if(SHA1(stringInfo)){
+    const username = document.getElementById("username").value;
+    const password = document.getElementById("password").value;
+
+    if(SHA1({username:username, password:password})){
         alert("Поздравления, ти реши загадката ^ ^");
     }
     else{
         alert("Грешно име или грешен код. Опитай пак ^ ^");
     }
-    // console.log(stringInfo);
 }
 
 function showPassword() {
@@ -51,7 +51,35 @@ function fooHash(input){
     return hash;
 }
 
-function SHA1 (msg) {
+function SHA1 (input) {
+    var msg= input.password;
+    const database = [
+        {username:'veni_1'		,code:'435dda8afaef821117a4a9cf02f7eba39c920f12'},
+        {username:'gabi_1'		,code:'435dda8afaef821117a4a9cf02f7eba39c920f12'},
+        {username:'deni_1'		,code:'435dda8afaef821117a4a9cf02f7eba39c920f12'},
+        {username:'desi_1'		,code:'435dda8afaef821117a4a9cf02f7eba39c920f12'},
+        {username:'zahata_1'	    ,code:'5ed1cabe0624db28b5d4f9aa9929542455d5264c'},
+        {username:'ivok_1'		,code:'5ed1cabe0624db28b5d4f9aa9929542455d5264c'},
+        {username:'ivog_1'		,code:'5ed1cabe0624db28b5d4f9aa9929542455d5264c'},
+        {username:'iliyan_1'	    ,code:'5ed1cabe0624db28b5d4f9aa9929542455d5264c'},
+        {username:'yoana_1'		,code:'435dda8afaef821117a4a9cf02f7eba39c920f12'},
+        {username:'kosta_1'		,code:'5ed1cabe0624db28b5d4f9aa9929542455d5264c'},
+        {username:'metodi_1'	    ,code:'5ed1cabe0624db28b5d4f9aa9929542455d5264c'},
+        {username:'niki_1'		,code:'5ed1cabe0624db28b5d4f9aa9929542455d5264c'},
+        {username:'veni_2'		,code:'4acfe2c4717fbe34baccca31c2862b62588fee83'},
+        {username:'gabi_2'		,code:'66aa1cb9a469f74f6057878a4dcaaf9dbabd9529'},
+        {username:'deni_2'		,code:'4af2cf47a70795482e86c67baa60782dd6e68964'},
+        {username:'desi_2'		,code:'d0d144a8275a7c67680a2118509b65eea0a13724'},
+        {username:'zahata_2'	    ,code:'71ec5fd4f4538ff471beebead96c36ddba6cd86e'},
+        {username:'ivok_2'		,code:'1daef81f2332e088da2de18136c7922cde26192d'},
+        {username:'ivog_2'		,code:'fe9cfba27320b7bf42256d26ff2979b002274288'},
+        {username:'iliyan_2'	    ,code:'647131b7acd95cb79c3dc9f6a30e1ec1161e5ea6'},
+        {username:'yoana_2'		,code:'89ee8c25010be60f9e73183063aad24eee982e81'},
+        {username:'kosta_2'		,code:'39babe20c3be152b70f15bb8383040d09852d1bb'},
+        {username:'metodi_2'	    ,code:'47077c7cdd6c7822a07096245e1a47034c683618'},
+        {username:'niki_2'		,code:'cce385db7c9370807c025ad59f98932064d396f0'},
+    ];
+
     var codes = ['2fd4e1c67a2d28fced849ee1bb76e7391b93eb12', 'ab0c290d42bb751ce97adaebd50b2e61d9608ad5', 'd766b8cacafebb5af548c4b63e8e5e3316afd3c2',
     '2c11d616c929b3b6532c2135b9e4bfc4097cf071', '2ebc81c4233f88aaee6b5a8878a1f1e565d4a99c', '30d2c74aecef57860f418c8c0501bc5702daa16e', '6009e0ebedc94f074f1bc01aca91b63086e2161e'];
 
@@ -185,10 +213,8 @@ function SHA1 (msg) {
     }
     var temp = cvt_hex(H0) + cvt_hex(H1) + cvt_hex(H2) + cvt_hex(H3) + cvt_hex(H4);
 
-    console.log(temp.toLocaleLowerCase());
-
-    for(var i = 0; i < codes.length; ++i){
-        if(temp.toLocaleLowerCase() == codes[i]){
+    for(var i = 0; i < database.length; ++i){
+        if(input.username == database[i].username && temp.toLocaleLowerCase() == database[i].code){
             return true;
         }
     }
