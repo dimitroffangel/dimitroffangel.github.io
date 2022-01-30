@@ -3,10 +3,10 @@ function onEnteredText(){
     const stringInfo = document.getElementById("password").value;
     
     if(SHA1(stringInfo)){
-        alert("good job fam");
+        alert("Поздравления, ти реши загадката ^ ^");
     }
     else{
-        alert("wrong password");
+        alert("Грешно име или грешен код. Опитай пак ^ ^");
     }
     // console.log(stringInfo);
 }
