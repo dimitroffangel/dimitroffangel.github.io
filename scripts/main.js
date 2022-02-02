@@ -54,15 +54,15 @@ function fooHash(input){
 function SHA1 (input) {
     var msg= input.password;
     const database = [
-        {username:'veni_1'		,code:'435dda8afaef821117a4a9cf02f7eba39c920f12'},
-        {username:'gabi_1'		,code:'435dda8afaef821117a4a9cf02f7eba39c920f12'},
-        {username:'deni_1'		,code:'435dda8afaef821117a4a9cf02f7eba39c920f12'},
-        {username:'desi_1'		,code:'435dda8afaef821117a4a9cf02f7eba39c920f12'},
+        {username:'veni_1'		,code:'c6944467da0c65a08c39bb5a0314cc143936eaa3'},
+        {username:'gabi_1'		,code:'c6944467da0c65a08c39bb5a0314cc143936eaa3'},
+        {username:'deni_1'		,code:'c6944467da0c65a08c39bb5a0314cc143936eaa3'},
+        {username:'desi_1'		,code:'c6944467da0c65a08c39bb5a0314cc143936eaa3'},
         {username:'zahata_1'	    ,code:'5ed1cabe0624db28b5d4f9aa9929542455d5264c'},
         {username:'ivok_1'		,code:'5ed1cabe0624db28b5d4f9aa9929542455d5264c'},
         {username:'ivog_1'		,code:'5ed1cabe0624db28b5d4f9aa9929542455d5264c'},
         {username:'iliyan_1'	    ,code:'5ed1cabe0624db28b5d4f9aa9929542455d5264c'},
-        {username:'yoana_1'		,code:'435dda8afaef821117a4a9cf02f7eba39c920f12'},
+        {username:'yoana_1'		,code:'c6944467da0c65a08c39bb5a0314cc143936eaa3'},
         {username:'kosta_1'		,code:'5ed1cabe0624db28b5d4f9aa9929542455d5264c'},
         {username:'metodi_1'	    ,code:'5ed1cabe0624db28b5d4f9aa9929542455d5264c'},
         {username:'niki_1'		,code:'5ed1cabe0624db28b5d4f9aa9929542455d5264c'},
